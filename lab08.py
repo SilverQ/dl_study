@@ -103,4 +103,130 @@ def reshape_test():
     '''
 
 
-reshape_test()
+# reshape_test()
+
+# https://m.blog.naver.com/wideeyed/221164750517
+# 여기의 설명은 "차원 중 크기가 1인 것을 찾아 제거
+
+def reshape_advance():
+    t = np.array(([[[0, 1, 2]],
+                   [[3, 4, 5]],
+                   [[6, 7, 8]],
+                   [[9, 10, 11]]]))
+    print(t.shape)  # (4, 1, 3)
+    with tf.Session() as sess:
+        t1 = tf.squeeze(t)
+        print(t1)       # Tensor("Squeeze:0", shape=(4, 3), dtype=int64)
+        print(sess.run(t1))
+        # print(sess.run(t1.shape))
+
+        a = [0, 1, 2, 3]
+        b = tf.expand_dims(a, axis=0)
+        c = tf.expand_dims(a, axis=1)
+        print(sess.run(b))      # [[0 1 2 3]]
+        print(sess.run(c))
+        '''
+        [[0]
+         [1]
+         [2]
+         [3]]
+        '''
+        d = tf.one_hot([0, 1, 2, 3, 4, 5], depth=0)     # 아무 정보도 표현하지 못함
+        e = tf.one_hot([0, 1, 2, 3, 4, 5], depth=1)     # 1개 element로 표현
+        f = tf.one_hot([0, 1, 2, 3, 4, 5], depth=2)     # 2개 element로 표현
+        g = tf.one_hot([0, 1, 2, 3, 4, 5], depth=3)
+        print(sess.run(d))  # []
+        print(sess.run(e))
+        '''
+        [[1.]
+         [0.]
+         [0.]
+         [0.]
+         [0.]
+         [0.]]
+        '''
+        print(sess.run(f))
+        '''
+        [[1. 0.]
+         [0. 1.]
+         [0. 0.]
+         [0. 0.]
+         [0. 0.]
+         [0. 0.]]
+        '''
+        print(sess.run(g))
+        '''
+        [[1. 0. 0.]
+         [0. 1. 0.]
+         [0. 0. 1.]
+         [0. 0. 0.]
+         [0. 0. 0.]
+         [0. 0. 0.]]
+        '''
+        h = tf.one_hot([0, 1, 2, 3, 4, 5], depth=6)     # 6개 element로 one hot 표현
+        print(sess.run(h))
+        '''
+        [[1. 0. 0. 0. 0. 0.]
+         [0. 1. 0. 0. 0. 0.]
+         [0. 0. 1. 0. 0. 0.]
+         [0. 0. 0. 1. 0. 0.]
+         [0. 0. 0. 0. 1. 0.]
+         [0. 0. 0. 0. 0. 1.]]
+        '''
+
+        a = tf.cast([1.2, 3.2, 4., 5.5], tf.int32)
+        print(sess.run(a))      # [1 3 4 5]
+        b = tf.cast([True, False, 1==1, 1==2], tf.int32)
+        print(sess.run(b))      # [1 0 1 0]
+
+
+# reshape_advance()
+
+# stack
+
+x = [1, 2]
+y = [3, 4]
+z = [5, 6]
+
+d = tf.stack([x, y, z])
+e = tf.stack([x, y, z], axis=0)
+f = tf.stack([x, y, z], axis=1)
+# g = tf.stack([x, y, z], axis=2)   # error@!!
+sess = tf.Session()
+print(sess.run(d))
+print(sess.run(e))
+print(sess.run(f))
+# print(sess.run(g))
+'''
+[[1 2]
+ [3 4]
+ [5 6]]
+
+[[1 2]
+ [3 4]
+ [5 6]]
+
+[[1 3 5]
+ [2 4 6]]
+'''
+
+e1 = tf.ones_like(e)
+f1 = tf.zeros_like(f)
+print(sess.run(e1))
+print(sess.run(f1))
+'''
+[[1 1]
+ [1 1]
+ [1 1]]
+[[0 0 0]
+ [0 0 0]]
+'''
+
+for x, y in zip([1, 2, 3], [4, 5, 6]):      # [1, 2, 3]이 x, [4, 5, 6]이 y, x와 y에 대해 3번 실행.
+    print(x)        # 1 2 3
+    print(y)        # 4 5 6
+    print(x, y)     # 1 4   2 5     3 6
+
+# for x, y in zip([1, 2], 4]):    # error!!!!!
+#     print(x)
+#     print(y)

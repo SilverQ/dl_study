@@ -25,6 +25,7 @@ Y = tf.placeholder(dtype=tf.float32, shape=[1, seq_length])
 rnn_cell = tf.nn.rnn_cell.BasicRNNCell(num_units=hidden_size)
 initial_state = rnn_cell.zero_state(batch_size=batch_size, dtype=tf.float32)
 
+
 # sequence_loss가 어떻게 동작하는지는 lab12-1에서 해보는 중
 outputs, _states = tf.nn.dynamic_rnn(rnn_cell, X, initial_state=initial_state, dtype=tf.float32)
 

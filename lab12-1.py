@@ -16,7 +16,7 @@ def vanila_rnn():
         outputs_val = sess.run(outputs)
         print(outputs_val)
 
-# lab12-2의 sequence_loss
+# lab12-2의 sequence_loss 해보는 중
 y_data = tf.constant([[1, 1, 1]])
 pred = tf.constant([[[0.2, 0.7], [0.6, 0.2], [0.2, 0.9]]], dtype=tf.float32)
 weight = tf.constant([[1, 1, 1]], dtype=tf.float32)

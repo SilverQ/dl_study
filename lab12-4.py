@@ -40,6 +40,7 @@ initial_state = rnn_cell.zero_state(batch_size=batch_size, dtype=tf.float32)
 
 outputs, _states = tf.nn.dynamic_rnn(rnn_cell, X_one_hot, initial_state=initial_state, dtype=tf.float32)
 outputs = tf.reshape()
+# https://www.youtube.com/watch?v=vwjt1ZE5-K4, 4:36 진행 중
 
 weights = tf.ones([batch_size, seq_len])
 sequence_loss = tf.contrib.seq2seq.sequence_loss(logits=outputs, targets=Y, weights=weights)

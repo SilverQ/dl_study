@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
-np.set_printoptions(precision=1)
-import keras
+np.set_printoptions(precision=2)
+# import keras
 
 
 # Stacked RNN
@@ -83,8 +83,8 @@ print(y_data[:3])
 '''
 # print(np.shape(x_data))     # (309, 5)
 
-X = tf.placeholder(dtype=tf.int32, shape=[None, window_size], name='input_data_x')
-Y = tf.placeholder(dtype=tf.int32, shape=[None, window_size], name='label_data_y')
+X = tf.placeholder(dtype=tf.int32, shape=[None, None], name='input_data_x')
+Y = tf.placeholder(dtype=tf.int32, shape=[None, None], name='label_data_y')
 
 X_one_hot = tf.one_hot(indices=X, depth=len(char_set))
 '''
@@ -134,30 +134,54 @@ show_tensor(X_one_hot, {X: x_data[:2]})
 
 # create a BasicRNNCell
 hidden_size = 5
-basic_rnn_cell = tf.nn.rnn_cell.BasicRNNCell(hidden_size)
-multi_rnn_cell = tf.nn.rnn_cell.MultiRNNCell([basic_rnn_cell] * 2, state_is_tuple=True)
+# basic_rnn_cell = tf.nn.rnn_cell.BasicRNNCell(hidden_size)
+# multi_rnn_cell = tf.nn.rnn_cell.MultiRNNCell([basic_rnn_cell] * 2)
 
-# 'outputs' is a tensor of shape [batch_size, max_time, cell_state_size]
 
-# defining initial state
-batch_size = 3
-# initial_state = rnn_cell.zero_state(batch_size, dtype=tf.float32)
+def lstm_cell():
+    cell = tf.contrib.rnn.BasicLSTMCell(hidden_size, state_is_tuple=True)
+    return cell
+
+
+multi_cells = tf.contrib.rnn.MultiRNNCell([lstm_cell() for _ in range(2)], state_is_tuple=True)
+
+batch_size = 10
 
 # 'state' is a tensor of shape [batch_size, cell_state_size]
-outputs, _states = tf.nn.dynamic_rnn(multi_rnn_cell, X_one_hot,
-                                     # initial_state=initial_state,
-                                     dtype=tf.float32)
+outputs, _states = tf.nn.dynamic_rnn(multi_cells, X_one_hot, dtype=tf.float32)
+X_for_fc = tf.reshape(outputs, [-1, hidden_size])
+outputs = tf.contrib.layers.fully_connected(X_for_fc, len(char_set), activation_fn=None)
+outputs = tf.reshape(outputs, [batch_size, window_size, len(char_set)])
 
 # print(x_data[:2])
-# show_tensor(outputs, {X: x_data[:2]})
+# show_tensor(outputs, {X: x_data[:3]})
 
-# weights = tf.ones([batch_size, hidden_size])
-# sequence_loss = tf.contrib.seq2seq.sequence_loss(logits=outputs, targets=Y, weights=weights)
-# loss = tf.reduce_mean(sequence_loss)
-# train = tf.train.AdamOptimizer(learning_rate=0.01).minimize(loss=loss)
-#
-# pred = tf.argmax(outputs, axis=2)
+weights = tf.ones([batch_size, hidden_size])
+sequence_loss = tf.contrib.seq2seq.sequence_loss(logits=outputs, targets=Y, weights=weights)
+loss = tf.reduce_mean(sequence_loss)
+train = tf.train.AdamOptimizer(learning_rate=0.01).minimize(loss=loss)
 
-show_tensor(outputs, {X: x_data[:3], Y: y_data[:3]})
-# show_tensor(pred, {X: x_data[:2], Y: y_data[:2]})
+pred = tf.argmax(outputs, axis=2)
+
+# show_tensor(outputs, {X: x_data[:3], Y: y_data[:3]})
+# show_tensor(pred, {X: x_data[:10], Y: y_data[:2]})
 # show_tensor(initial_state, {X: x_data[:2]})
+# show_tensor(sequence_loss, {X: x_data[:10], Y: y_data[:10]})
+
+epoch = 3
+iter = int(len(input_sentence) / batch_size)
+# print(iter)
+
+# training
+with tf.Session() as sess:
+    sess.run(tf.global_variables_initializer())
+    for step in range(epoch):
+        for i in range(iter):
+            # print(step, i)
+            # print(x_data[i:i+batch_size])
+            feed_dict = {X: x_data[i:i+batch_size], Y: y_data[i+1: i+batch_size+1]}
+            loss_val, _ = sess.run([loss, train], feed_dict=feed_dict)
+            print(step, i, loss_val)
+
+    # expected_sentence = sess.run(outputs, feed_dict={X: x_data})
+    # print(expected_sentence)

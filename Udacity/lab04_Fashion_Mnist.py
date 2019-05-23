@@ -2,7 +2,6 @@ from __future__ import absolute_import, division, print_function
 
 import tensorflow as tf
 import tensorflow_datasets as tfds
-tf.logging.set_verbosity(tf.logging.ERROR)
 
 # Helper libraries
 import math
@@ -12,11 +11,13 @@ import matplotlib.pyplot as plt
 # Improve progress bar display
 import tqdm
 import tqdm.auto
+
+tf.logging.set_verbosity(tf.logging.ERROR)
 tqdm.tqdm = tqdm.auto.tqdm
 
 print(tf.__version__)       # 1.12.0
 
-# tf.enable_eager_execution()
+tf.enable_eager_execution()
 
 dataset, metadata = tfds.load('fashion_mnist', as_supervised=True, with_info=True)
 train_dataset, test_dataset = dataset['train'], dataset['test']
@@ -87,7 +88,9 @@ model = tf.keras.Sequential([l0, l1, l2])
 # ])
 
 # Compile the model
-model.compile(optimizer='adam',
+# opt = tf.keras.optimizers.SGD(lr=0.1, decay=0.000225, momentum=0.5)
+opt = tf.keras.optimizers.Adam(lr=0.1)
+model.compile(optimizer=opt,
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 # adam 옵티마이저와 tf.enable_eager_execution()과는 문제가 있는듯.

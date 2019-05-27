@@ -76,20 +76,21 @@ plt.show()
 '''
 
 # Build a model only with fully connected layers
-l0 = tf.keras.layers.Flatten(input_shape=(28, 28, 1))       # input
-l1 = tf.keras.layers.Dense(128, activation=tf.nn.relu)      # hidden
-l2 = tf.keras.layers.Dense(10, activation=tf.nn.softmax)    # output
+# l0 = tf.keras.layers.Flatten(input_shape=(28, 28, 1))       # input
+# l1 = tf.keras.layers.Dense(128, activation=tf.nn.relu)      # hidden
+# l2 = tf.keras.layers.Dense(10, activation=tf.nn.softmax)    # output
 
-model = tf.keras.Sequential([l0, l1, l2])
-# model = tf.keras.Sequential([
-#     tf.keras.layers.Flatten(input_shape=(28, 28, 1)),
-#     tf.keras.layers.Dense(128, activation=tf.nn.relu),
-#     tf.keras.layers.Dense(10, activation=tf.nn.softmax)
-# ])
+# model = tf.keras.Sequential([l0, l1, l2])
+model = tf.keras.Sequential([
+    tf.keras.layers.Flatten(input_shape=(28, 28, 1)),
+    tf.keras.layers.Dense(256, activation=tf.nn.relu),
+    tf.keras.layers.Dense(128, activation=tf.nn.relu),
+    tf.keras.layers.Dense(10, activation=tf.nn.softmax)
+])
 
 # Compile the model
 # opt = tf.keras.optimizers.SGD(lr=0.1, decay=0.000225, momentum=0.5)
-opt = tf.keras.optimizers.Adam(lr=0.1)
+opt = tf.keras.optimizers.Adam(lr=0.01)
 model.compile(optimizer=opt,
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
@@ -126,3 +127,4 @@ Traceback (most recent call last):
     raise RuntimeError("dataset.__iter__() is only supported when eager "
 RuntimeError: dataset.__iter__() is only supported when eager execution is enabled.
 '''
+# Solve: Adjust the environment to Tensorflow 1.13, Cuda 10.0(Not 10.1), CuDNN7

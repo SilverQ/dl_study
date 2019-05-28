@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0bca291-e6fa-4372-97af-db1fb8da9ade" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DeepLearning Basic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DeepLearning Basic.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist_additional approach.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist.py" beforeDir="false" afterPath="$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist.py" afterDir="false" />
     </list>
@@ -15,13 +14,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="819">
-              <caret line="130" column="39" selection-start-line="130" selection-start-column="39" selection-end-line="130" selection-end-column="39" />
+            <state relative-caret-position="304">
+              <caret line="189" selection-start-line="189" selection-end-line="189" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
+                <element signature="e#1388#1974#1" />
+                <element signature="e#5560#6122#0" />
+                <element signature="e#6186#6547#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist_additional approach.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="743">
+              <caret line="201" selection-start-line="201" selection-end-line="201" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+                <element signature="e#5560#6122#0" />
+                <element signature="e#6186#6547#0" />
               </folding>
             </state>
           </provider>
@@ -37,6 +53,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist.py" />
+        <option value="$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist_additional approach.py" />
       </list>
     </option>
   </component>
@@ -53,8 +70,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Env/tensorflow-gpu-1.13" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Udacity" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Udacity" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -68,7 +90,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.lab04_Fashion_Mnist_additional approach">
     <configuration name="lab04_Fashion_Mnist" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DeepLearning Basic" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -90,8 +112,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="lab04_Fashion_Mnist_additional approach" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DeepLearning Basic" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Udacity" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist_additional approach.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.lab04_Fashion_Mnist_additional approach" />
         <item itemvalue="Python.lab04_Fashion_Mnist" />
       </list>
     </recent_temporary>
@@ -107,6 +151,14 @@
       <option name="presentableId" value="Default" />
       <updated>1558604605849</updated>
     </task>
+    <task id="LOCAL-00001" summary="fix eager execution">
+      <created>1558945118115</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558945118115</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -117,7 +169,7 @@
       <window_info content_ui="combo" id="Project" order="1" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Version Control" order="3" sideWeight="0.4989754" weight="0.32889345" />
-      <window_info id="Run" order="4" weight="0.38060096" />
+      <window_info active="true" id="Run" order="4" visible="true" weight="0.44667372" />
       <window_info anchor="bottom" id="Python Console" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010246" side_tool="true" weight="0.32904148" />
@@ -134,13 +186,32 @@
       <window_info anchor="right" id="R Packages" order="4" />
     </layout>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix eager execution" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix eager execution" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="130" column="39" selection-start-line="130" selection-start-column="39" selection-end-line="130" selection-end-column="39" />
+        <state relative-caret-position="304">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
+            <element signature="e#1388#1974#1" />
+            <element signature="e#5560#6122#0" />
+            <element signature="e#6186#6547#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist_additional approach.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="201" selection-start-line="201" selection-end-line="201" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+            <element signature="e#5560#6122#0" />
+            <element signature="e#6186#6547#0" />
           </folding>
         </state>
       </provider>

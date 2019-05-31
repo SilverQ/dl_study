@@ -17,7 +17,7 @@ tqdm.tqdm = tqdm.auto.tqdm
 
 print(tf.__version__)       # 1.12.0
 
-tf.enable_eager_execution()
+# tf.enable_eager_execution()
 
 dataset, metadata = tfds.load('fashion_mnist', as_supervised=True, with_info=True)
 train_dataset, test_dataset = dataset['train'], dataset['test']

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0bca291-e6fa-4372-97af-db1fb8da9ade" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Udacity/lab06_exercise_flowers_w_data_aug.py" afterDir="false" />
+    <list default="true" id="a0bca291-e6fa-4372-97af-db1fb8da9ade" name="Default Changelist" comment="2'nd commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +15,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Udacity/lab05_Cats_and_Dogs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="758">
-              <caret line="146" lean-forward="true" selection-start-line="131" selection-end-line="146" />
+            <state relative-caret-position="2397">
+              <caret line="146" selection-start-line="131" selection-end-line="146" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -28,8 +27,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Udacity/lab06_exercise_flowers_w_data_aug.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="189" selection-start-line="189" selection-end-line="190" selection-end-column="34" />
+            <state>
               <folding>
                 <element signature="e#0#82#0" expanded="true" />
               </folding>
@@ -62,16 +60,33 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2341" />
-    <option name="y" value="27" />
-    <option name="width" value="1440" />
-    <option name="height" value="810" />
+    <option name="y" value="-2" />
+    <option name="width" value="1920" />
+    <option name="height" value="1082" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dl_study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dl_study" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dl_study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dl_study" type="462c0819:PsiDirectoryNode" />
+              <item name="Udacity" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -250,18 +265,31 @@
       <option name="project" value="LOCAL" />
       <updated>1560844102044</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1'st commit">
+      <created>1560861113022</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1560861113022</updated>
+    </task>
+    <task id="LOCAL-00006" summary="2'nd commit">
+      <created>1560926534166</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1560926534166</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1987" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.24986821" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24986821" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Version Control" order="3" sideWeight="0.4989754" weight="0.32889345" />
-      <window_info active="true" id="Run" order="4" visible="true" weight="0.6530055" />
+      <window_info id="Run" order="4" weight="0.49836066" />
       <window_info anchor="bottom" id="Python Console" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010246" side_tool="true" weight="0.32904148" />
@@ -282,7 +310,8 @@
     <MESSAGE value="fix eager execution" />
     <MESSAGE value="model save and load" />
     <MESSAGE value="1'st commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="1'st commit" />
+    <MESSAGE value="2'nd commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="2'nd commit" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist_additional approach.py">
@@ -320,8 +349,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Udacity/lab05_Cats_and_Dogs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="758">
-          <caret line="146" lean-forward="true" selection-start-line="131" selection-end-line="146" />
+        <state relative-caret-position="2397">
+          <caret line="146" selection-start-line="131" selection-end-line="146" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
@@ -330,8 +359,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Udacity/lab06_exercise_flowers_w_data_aug.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="189" selection-start-line="189" selection-end-line="190" selection-end-column="34" />
+        <state>
           <folding>
             <element signature="e#0#82#0" expanded="true" />
           </folding>

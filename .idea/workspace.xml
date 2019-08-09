@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0bca291-e6fa-4372-97af-db1fb8da9ade" name="Default Changelist" comment="1'st commit">
-      <change afterPath="$PROJECT_DIR$/Codewars/First Variation on Caesar Cipher.py" afterDir="false" />
+    <list default="true" id="a0bca291-e6fa-4372-97af-db1fb8da9ade" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Codewars/Factorial decomposition.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/20190808_Class.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/Recursive Loop.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,7 +47,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.First Variation on Caesar Cipher">
+  <component name="RunManager" selected="Python.Recursive Loop">
+    <configuration name="20190808_Class" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DeepLearning Basic" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/20190808_Class.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="First Variation on Caesar Cipher" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DeepLearning Basic" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -67,7 +90,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lab04_Fashion_Mnist_additional approach" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Recursive Loop" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DeepLearning Basic" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -75,11 +98,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Udacity" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist_additional approach.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/Recursive Loop.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -101,27 +124,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Udacity/lab05_Cats_and_Dogs.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="lab05_DogsandCats" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="DeepLearning Basic" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Udacity" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Udacity/lab05_DogsandCats.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Recursive Loop" />
+        <item itemvalue="Python.20190808_Class" />
         <item itemvalue="Python.First Variation on Caesar Cipher" />
         <item itemvalue="Python.lab06_exercise_flowers_w_data_aug" />
         <item itemvalue="Python.lab05_Cats_and_Dogs" />
-        <item itemvalue="Python.lab05_DogsandCats" />
-        <item itemvalue="Python.lab04_Fashion_Mnist_additional approach" />
       </list>
     </recent_temporary>
   </component>
@@ -228,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561361936169</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="1'st commit">
+      <created>1565168711678</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1565168711678</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,7 +245,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

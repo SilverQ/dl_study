@@ -92,3 +92,35 @@ def de_nico_old(key, msg):
 # de_nico("crazy", "cseerntiofarmit on")
 de_nico('ifjlkopsdy', 'wookmgsjizupslimptmwd uhwqr')    # 'ookgmsjiwzsplmiptmuwu hqwrd'
 # de_nico('mljkcrpsqh', 'ylryipucrvxgwixd')               # 'piryyruvcldxwixg'
+
+
+# Other's Solutions
+# daddepledge, lanceris, Alicorn
+def de_nico(key, msg):
+    ll, order, s = len(key), [sorted(key).index(c) for c in key], ''
+    while msg:
+        s, msg = s + ''.join(msg[i] for i in order if i < len(msg)), msg[ll:]
+    return s.strip()
+
+
+# mgol
+import itertools
+def de_nico(key,msg):
+    pack =[list(range(len(key)))]+list(list(msg[i:i+len(key)]) for i in range(0,len(msg),len(key)))
+    sor = [sorted(key).index(i) for i in key]
+    sorting = sorted(itertools.zip_longest(*pack,fillvalue=""), key=lambda col: sor.index(col[0]))
+    return "".join(["".join(j) for i,j in enumerate(itertools.zip_longest(*sorting,fillvalue=" ")) if i>0]).strip(" ")
+
+
+# GiacomoSorbi
+de_nico=lambda k,m: (lambda k: "".join((lambda g: "".join(g[p] for p in k if p<len(g)))(m[i*len(k):(i+1)*len(k)]) for i in range(len(m)//len(k)+1)).strip())((lambda s: [s.index(l) for l in k])(sorted(k)))
+
+
+# xavierguihot
+def de_nico(key, msg):
+  key = [sorted(key).index(c) for c in key]
+  return ''.join(x for x, _ in sorted([(c, key.index(i%len(key)) + len(key)*(i//len(key))) for i, c in enumerate(msg)], key = lambda x: x[1])).rstrip()
+
+
+# lechevalier
+de_nico=lambda k,s:''.join(sum(zip(*map({j:s[i::len(k)]+'\1'for i,j in enumerate(sorted(range(len(k)),key=k.__getitem__))}.get,range(len(k)))),('',))).replace('\1','').strip()

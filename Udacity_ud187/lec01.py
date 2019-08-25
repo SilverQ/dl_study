@@ -41,7 +41,9 @@ def random_number():
 
 # shape of array
 b = np.array([0, 1, 2, 3, 4, 5])
-# print(b.shape)
+c = np.array([[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 5]])
+print(b.shape)
+print(c.shape)
 # (6,)
 # 이 shape을 기억해야 한다. 내가 이걸 이 shape으로부터 데이터의 모양을 다시 추측하기 어려워하고 있다.
 

@@ -17,6 +17,7 @@ xx = tf.placeholder(tf.float32)
 yy = tf.placeholder(tf.float32)
 
 l0 = tf.keras.layers.Dense(units=1, input_shape=[1])
+l0 = tf.keras.layers.Dense()
 # the units is the neuron, so we must define the number of neurons
 # in this case, the neuron has single value weight and single value bias
 

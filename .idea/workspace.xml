@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0bca291-e6fa-4372-97af-db1fb8da9ade" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Codewars/Break the Ceasar.py" afterDir="false" />
+    <list default="true" id="e805bcc5-b892-4e27-a95b-df4cd965ab26" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/NLP(LearningSpoons)/Day01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DeepLearning Basic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DeepLearning Basic.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Udacity_ud187/lab03_degree_tf_layer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Udacity_ud187/lab03_degree_tf_layer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Udacity_ud187/lab05_Cats_and_Dogs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Udacity_ud187/lab05_Cats_and_Dogs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Udacity_ud187/lec01.py" beforeDir="false" afterPath="$PROJECT_DIR$/Udacity_ud187/lec01.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NLP(LearningSpoons)/Day01.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="656">
+              <caret line="68" column="21" lean-forward="true" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+              <folding>
+                <element signature="e#1858#2011#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -22,10 +43,51 @@
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1P5dm2pIyCDe3J7P2pDqkH3V61U" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist.py" />
+        <option value="$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist_additional approach.py" />
+        <option value="$PROJECT_DIR$/Udacity/lab05_DogsandCats.py" />
+        <option value="$PROJECT_DIR$/Udacity/lab05_Cats_and_Dogs.py" />
+        <option value="$PROJECT_DIR$/Udacity/lab06_exercise_flowers_w_data_aug.py" />
+        <option value="$PROJECT_DIR$/NLP(LearningSpoons)/Day01.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-5" />
+    <option name="y" value="-13" />
+    <option name="width" value="1245" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dl_study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dl_study" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dl_study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dl_study" type="462c0819:PsiDirectoryNode" />
+              <item name="NLP(LearningSpoons)" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Udacity" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -45,8 +107,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Break the Ceasar">
-    <configuration name="Basic DeNico" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Day01">
+    <configuration name="Day01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DeepLearning Basic" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -54,11 +116,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Codewars" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NLP(LearningSpoons)" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Codewars/Basic DeNico.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NLP(LearningSpoons)/Day01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -67,7 +129,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Break the Ceasar" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="lab04_Fashion_Mnist_additional approach" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DeepLearning Basic" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -75,11 +137,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Codewars" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Udacity" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Codewars/Break the Ceasar.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist_additional approach.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -88,7 +150,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Buddy Pairs" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="lab05_Cats_and_Dogs" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DeepLearning Basic" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -96,11 +158,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Codewars" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Udacity" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Codewars/Buddy Pairs.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Udacity/lab05_Cats_and_Dogs.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -109,7 +171,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Directions Reduction" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="lab05_DogsandCats" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DeepLearning Basic" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -117,11 +179,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Codewars" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Udacity" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Codewars/Directions Reduction.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Udacity/lab05_DogsandCats.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -130,7 +192,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Recreation One" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="lab06_exercise_flowers_w_data_aug" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DeepLearning Basic" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -138,11 +200,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Codewars" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Udacity" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Codewars/Recreation One.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Udacity/lab06_exercise_flowers_w_data_aug.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,11 +215,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Break the Ceasar" />
-        <item itemvalue="Python.Directions Reduction" />
-        <item itemvalue="Python.Basic DeNico" />
-        <item itemvalue="Python.Recreation One" />
-        <item itemvalue="Python.Buddy Pairs" />
+        <item itemvalue="Python.Day01" />
+        <item itemvalue="Python.lab06_exercise_flowers_w_data_aug" />
+        <item itemvalue="Python.lab05_Cats_and_Dogs" />
+        <item itemvalue="Python.lab05_DogsandCats" />
+        <item itemvalue="Python.lab04_Fashion_Mnist_additional approach" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +228,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a0bca291-e6fa-4372-97af-db1fb8da9ade" name="Default Changelist" comment="" />
+      <changelist id="e805bcc5-b892-4e27-a95b-df4cd965ab26" name="Default Changelist" comment="" />
       <created>1558604605849</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -214,90 +276,96 @@
       <option name="project" value="LOCAL" />
       <updated>1560926534166</updated>
     </task>
-    <task id="LOCAL-00007" summary="2'nd commit">
-      <created>1561361604449</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1561361604449</updated>
-    </task>
-    <task id="LOCAL-00008" summary="1'st commit">
-      <created>1561361936169</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1561361936169</updated>
-    </task>
-    <task id="LOCAL-00009" summary="1'st commit">
-      <created>1565168711678</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1565168711678</updated>
-    </task>
-    <task id="LOCAL-00010" summary="1'st commit">
-      <created>1565343036960</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1565343036960</updated>
-    </task>
-    <task id="LOCAL-00011" summary="1'st commit">
-      <created>1566209985301</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1566209985301</updated>
-    </task>
-    <task id="LOCAL-00012" summary="1'st commit">
-      <created>1566210467046</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1566210467046</updated>
-    </task>
-    <task id="LOCAL-00013" summary="1'st commit">
-      <created>1566374812814</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1566374812814</updated>
-    </task>
-    <task id="LOCAL-00014" summary="1'st commit">
-      <created>1566374970668</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1566374970668</updated>
-    </task>
-    <task id="LOCAL-00015" summary="1'st commit">
-      <created>1566440563495</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1566440563495</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24946696" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info id="Version Control" order="3" sideWeight="0.4989754" weight="0.32827005" />
+      <window_info id="Run" order="4" weight="0.45469084" />
+      <window_info anchor="bottom" id="Python Console" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010246" side_tool="true" weight="0.32904148" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="4" />
+    </layout>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix eager execution" />
     <MESSAGE value="model save and load" />
-    <MESSAGE value="2'nd commit" />
     <MESSAGE value="1'st commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="1'st commit" />
+    <MESSAGE value="2'nd commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="2'nd commit" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist_additional approach.py" />
+    <entry file="file://$PROJECT_DIR$/Udacity/lab04_Fashion_Mnist.py" />
+    <entry file="file://$PROJECT_DIR$/Udacity/lab05_DogsandCats.py" />
+    <entry file="file://$PROJECT_DIR$/Udacity/lab05_Cats_and_Dogs.py" />
+    <entry file="file://$PROJECT_DIR$/Udacity/lab06_exercise_flowers_w_data_aug.py" />
+    <entry file="file://$PROJECT_DIR$/Udacity_ud187/LAB05_CATSANDDOGS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Udacity_ud187/lab04_Fashion_Mnist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="17" column="36" selection-start-line="17" selection-end-line="17" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Udacity_ud187/lab03_degree_tf_layer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Udacity_ud187/lab05_Cats_and_Dogs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1328">
+          <caret line="88" column="9" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLP(LearningSpoons)/Day01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="68" column="21" lean-forward="true" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+          <folding>
+            <element signature="e#1858#2011#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

@@ -1,7 +1,3 @@
-import tensorflow as tf
-
-
-
 """
 bert 돌리려면 16g gpu가 16개를 병렬로 돌려야 학습 가능. 그러다보니 정확도를 좀 떨어뜨리더라도 cnn을 채용해서 inference하는 경우가 많음
 코사인, l1, l2, 자카드... 시밀러리티 측정 다양
@@ -70,64 +66,31 @@ batch는 속도, robust를 위해
 
 """
 
-import tensorflow as tf
-import torch
-import keras
-from tensorflow.keras import preprocessing
-from keras import preprocessing
-import os
-import numpy as np
+# 1일차 강의 핵심요약
+"""
 
+분류모델의 유사도(true, false), 유사도 계산(NLI)
 
-print(tf.__version__)
-# print(torch.__version__)
-# print(torch.__version__)
+[tf.estimator를 사용해보자.]
+장점
+    estimator를 사용하면 eval, 추가학습 등이 간편
+    https://excelsior-cjh.tistory.com/157
+    
+    하이레벨이라 간단, 모델 공유도 간단, 정확도 측정도 제각각인데, 모델 함수만 교환하고 estimator만 갖다붙이면 됨
+    그래프빌드, 학습, eval, 에측, 배포, 체크포인트 등
 
-samples = ['너 오늘 이뻐 보인다',
-          '나는 오늘 기분이 더러워',
-          '끝내주는데, 좋은 일이 있나봐',
-          '나 오늘 좋은 일이 생겼어',
-          '아 진짜 짜증나',
-          '오, 이거 진짜 좋은 것 같은데']
+종류
+    pre-made estimator : 사전 정의된 뉴럴 네트워크 tf.estimator.DNNClassifier
+        사실 프리메이드는 써보기 수준이지, 상용화는 그닥...
+    
+    custom estimator : 입력함수/모델함수 정의, instantiate estimator
 
-targets = [[1], [0], [1], [1], [0], [1]]
+사용
+    입력함수 : feature를 딕셔너리 형태로
+    모델함수는 상대적으로 규격화되어 있다, 피처/라벨/모드를 필수입력, 파람스는 옵션
+    리턴은 tf.estimator.EstimatorSpec() 의 형태로
 
-tokenizer = preprocessing.text.Tokenizer()
-tokenizer.fit_on_texts(samples)
-sequences = tokenizer.texts_to_sequences(samples)
-sequences = preprocessing.sequence.pad_sequences(sequences, maxlen=6, padding='post')
-
-targets = np.array(targets)
-
-print("index text data : \n", sequences)
-print("shape of sequences:", sequences.shape)
-
-word_index = tokenizer.word_index
-
-print("index of each word : \n", word_index)
-
-print("targets: \n", targets)
-print("shape of targets:", targets.shape)
-
-inputs_ph = tf.placeholder(dtype=tf.int32, shape=[6], name='sequences')
-labels_ph = tf.placeholder(dtype=tf.int32, shape=[1], name='labels')
-
-with tf.Session() as sess:
-    for i in range(len(sequences)):
-        sequence_input, label = sess.run([inputs_ph, labels_ph],
-                                         feed_dict = {inputs_ph: sequences[i], labels_ph: targets[i]})
-        print('='*40)
-        print('Sequence input:', sequence_input)
-        print('Label:', label)
-    print('='*40)
-
-# <Your code>
-
-# with tf.Session() as sess:
-#     for i in random_index:
-#         # <Your code>
-#         print('='*40)
-#         print('Sequence input:', sequence_input)
-#         print('Label:', label)
-#     print('='*40)
-
+    tf.data : estimator와 굉장히 잘 맞는 api
+    placeholder, feed_dict보다 높은 성능, 간단한 batch/epoch/shuffle/map 구햔
+    optimized pipeline
+"""

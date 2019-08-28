@@ -1,13 +1,13 @@
 import tensorflow as tf
 import torch
-import keras
-from keras import preprocessing
+# import keras
+from tensorflow.keras import preprocessing
 import os
 import numpy as np
 
 print(tf.__version__)  # 1.12.0
 print(torch.__version__)  # 1.1.0
-print(keras.__version__)  # 2.2.5
+# print(keras.__version__)  # 2.2.5
 
 samples = ['너 오늘 이뻐 보인다',
            '나는 오늘 기분이 더러워',
@@ -32,23 +32,9 @@ word_index = tokenizer.word_index
 # print("targets: \n", targets)
 # print("shape of targets:", targets.shape)  # shape of targets: (6, 1)
 
-# # [기본 코드]
-# dataset = tf.data.Dataset.from_tensor_slices((sequences, targets))    # 튜플로 감싸서 넣으면 tf.data가 알아서 잘라서 쓴다
-# iterator = dataset.make_one_shot_iterator()           # 없어도 됨, If using `tf.estimator`, return the `Dataset` object directly from your input function
-# next_data = iterator.get_next()
-#
-# with tf.Session() as sess:
-#     while True:
-#         try:
-#             seq, lab = next_data
-#             print(sess.run([seq, lab]))
-#         except:
-#             break        # 갯수가 끝나면 에러뜨면서 종료
-
-# [셔플 데이터]
-dataset = tf.data.Dataset.from_tensor_slices((sequences, targets))
-dataset = dataset.shuffle(len(sequences))   # 데이터 길이만큼 지정해주는게 가장 좋아
-iterator = dataset.make_one_shot_iterator()
+# [기본 코드]
+dataset = tf.data.Dataset.from_tensor_slices((sequences, targets))    # 튜플로 감싸서 넣으면 tf.data가 알아서 잘라서 쓴다
+iterator = dataset.make_one_shot_iterator()           # 없어도 됨, If using `tf.estimator`, return the `Dataset` object directly from your input function
 next_data = iterator.get_next()
 
 with tf.Session() as sess:
@@ -57,14 +43,43 @@ with tf.Session() as sess:
             seq, lab = next_data
             print(sess.run([seq, lab]))
         except:
-            break
+            break        # 갯수가 끝나면 에러뜨면서 종료
+
+# # [셔플 데이터]
+# dataset = tf.data.Dataset.from_tensor_slices((sequences, targets))
+# dataset = dataset.shuffle(len(sequences))   # 데이터 길이만큼 지정해주는게 가장 좋아
+# iterator = dataset.make_one_shot_iterator()
+# next_data = iterator.get_next()
+#
+# with tf.Session() as sess:
+#     while True:
+#         try:
+#             seq, lab = next_data
+#             print(sess.run([seq, lab]))
+#         except:
+#             break
+""" Results :
+[array([5, 1, 6, 7, 0, 0], dtype=int32), array([1])]
+[array([ 8,  1,  9, 10,  0,  0], dtype=int32), array([0])]
+[array([11,  2,  3, 12,  0,  0], dtype=int32), array([1])]
+[array([13,  1,  2,  3, 14,  0], dtype=int32), array([1])]
+[array([15,  4, 16,  0,  0,  0], dtype=int32), array([0])]
+[array([17, 18,  4,  2, 19, 20], dtype=int32), array([1])]
+vs
+[array([15,  4, 16,  0,  0,  0], dtype=int32), array([0])]
+[array([ 8,  1,  9, 10,  0,  0], dtype=int32), array([0])]
+[array([17, 18,  4,  2, 19, 20], dtype=int32), array([1])]
+[array([11,  2,  3, 12,  0,  0], dtype=int32), array([1])]
+[array([13,  1,  2,  3, 14,  0], dtype=int32), array([1])]
+[array([5, 1, 6, 7, 0, 0], dtype=int32), array([1])]
+"""
 
 # # [배치 데이터]
 # BATCH_SIZE = 2
 #
 # dataset = tf.data.Dataset.from_tensor_slices((sequences, targets))
+# dataset = dataset.shuffle(len(sequences))       # 셔플을 먼저 해주고 배치를 자르자.
 # dataset = dataset.batch(BATCH_SIZE)
-# dataset = dataset.shuffle(len(sequences))
 # iterator = dataset.make_one_shot_iterator()
 # next_data = iterator.get_next()
 #
@@ -74,15 +89,33 @@ with tf.Session() as sess:
 #             print(sess.run(next_data))
 #         except tf.errors.OutOfRangeError:
 #             break
-#
+""" Results : 
+[array([5, 1, 6, 7, 0, 0], dtype=int32), array([1])]
+[array([ 8,  1,  9, 10,  0,  0], dtype=int32), array([0])]
+[array([11,  2,  3, 12,  0,  0], dtype=int32), array([1])]
+[array([13,  1,  2,  3, 14,  0], dtype=int32), array([1])]
+[array([15,  4, 16,  0,  0,  0], dtype=int32), array([0])]
+[array([17, 18,  4,  2, 19, 20], dtype=int32), array([1])]
+vs
+(array([[13,  1,  2,  3, 14,  0],
+       [ 5,  1,  6,  7,  0,  0]], dtype=int32), array([[1],
+       [1]]))
+(array([[17, 18,  4,  2, 19, 20],
+       [15,  4, 16,  0,  0,  0]], dtype=int32), array([[1],
+       [0]]))
+(array([[ 8,  1,  9, 10,  0,  0],
+       [11,  2,  3, 12,  0,  0]], dtype=int32), array([[0],
+       [1]]))
+"""
+
 # # Epochs
 # BATCH_SIZE = 2
 # EPOCH_SIZE = 2
 #
 # dataset = tf.data.Dataset.from_tensor_slices((sequences, targets))
-# dataset = dataset.batch(BATCH_SIZE)
 # dataset = dataset.shuffle(len(sequences))
-# dataset = dataset.repeat(len(sequences))
+# dataset = dataset.batch(BATCH_SIZE)
+# dataset = dataset.repeat(EPOCH_SIZE)
 #
 # iterator = dataset.make_one_shot_iterator()
 # next_data = iterator.get_next()
@@ -93,25 +126,54 @@ with tf.Session() as sess:
 #             print(sess.run(next_data))
 #         except:
 #             break
-#
-# # [Map]
-# def map_fn(X, Y=None):
-#     inputs = {'x': X}
-#     label = Y
-#     return inputs, label
-#
-# dataset = tf.data.Dataset.from_tensor_slices((sequences, targets))
-# dataset = dataset.map(map_fn)
-# iterator = dataset.make_one_shot_iterator()
-# next_data = iterator.get_next()
-#
-# with tf.Session() as sess:
-#     while True:
-#         try:
-#             print(sess.run(next_data))
-#         except:
-#             break
-#
+""" Results :
+[array([5, 1, 6, 7, 0, 0], dtype=int32), array([1])]
+[array([ 8,  1,  9, 10,  0,  0], dtype=int32), array([0])]
+[array([11,  2,  3, 12,  0,  0], dtype=int32), array([1])]
+[array([13,  1,  2,  3, 14,  0], dtype=int32), array([1])]
+[array([15,  4, 16,  0,  0,  0], dtype=int32), array([0])]
+[array([17, 18,  4,  2, 19, 20], dtype=int32), array([1])]
+vs
+(array([[15,  4, 16,  0,  0,  0],
+       [ 5,  1,  6,  7,  0,  0]], dtype=int32), array([[0],
+       [1]]))
+(array([[ 8,  1,  9, 10,  0,  0],
+       [13,  1,  2,  3, 14,  0]], dtype=int32), array([[0],
+       [1]]))
+(array([[11,  2,  3, 12,  0,  0],
+       [17, 18,  4,  2, 19, 20]], dtype=int32), array([[1],
+       [1]]))
+(array([[15,  4, 16,  0,  0,  0],
+       [ 8,  1,  9, 10,  0,  0]], dtype=int32), array([[0],
+       [0]]))
+(array([[17, 18,  4,  2, 19, 20],
+       [ 5,  1,  6,  7,  0,  0]], dtype=int32), array([[1],
+       [1]]))
+(array([[13,  1,  2,  3, 14,  0],
+       [11,  2,  3, 12,  0,  0]], dtype=int32), array([[1],
+       [1]]))
+"""
+
+
+# [Map]
+def map_fn(X, Y=None):
+    inputs = {'x': X}
+    label = Y
+    return inputs, label
+
+
+dataset = tf.data.Dataset.from_tensor_slices((sequences, targets))
+dataset = dataset.map(map_fn)
+iterator = dataset.make_one_shot_iterator()
+next_data = iterator.get_next()
+
+with tf.Session() as sess:
+    while True:
+        try:
+            print(sess.run(next_data))
+        except:
+            break
+
 # # [Map with two vairables]
 # def map_fn(X1, X2, Y=None):
 #     inputs = {'x1': X1, 'x2': X2}
